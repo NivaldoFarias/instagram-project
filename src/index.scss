@@ -1,0 +1,41 @@
+@import "./sass/variables";
+@import "./sass/resets";
+
+body,
+.root {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+
+  margin: 0 !important;
+
+  overflow: hidden;
+  background-color: red;
+}
+main {
+  position: inherit;
+  height: 200px;
+  width: 100%;
+
+  p {
+    position: absolute;
+    top: 81px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    font-size: 50px;
+  }
+}
+ul {
+  height: fit-content;
+  width: 100%;
+}
+li {
+  margin-top: 10px;
+
+  color: yellow;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
