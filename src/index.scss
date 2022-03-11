@@ -1,5 +1,5 @@
-@import "./variables";
-@import "./resets";
+@import "./sass/variables";
+@import "./sass/resets";
 
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   font-size: 14px;
 }
 
-.navbar {
+nav {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -28,12 +28,12 @@ body {
   z-index: 2;
 }
 
-.navbar ion-icon,
-.navbar img {
+nav ion-icon,
+nav img {
   cursor: pointer;
 }
 
-.navbar .container {
+nav .container {
   width: 100%;
   max-width: 935px;
   display: flex;
@@ -42,25 +42,25 @@ body {
   height: 100%;
 }
 
-.navbar .container > * {
+nav .container > * {
   display: flex;
   align-items: center;
   height: 100%;
 }
 
-.navbar .logo img {
+nav .logo img {
   position: relative;
   top: 3px;
 }
 
-.navbar .logo .separador {
+nav .logo .separador {
   width: 1px;
   height: 22px;
   background-color: #dbdbdb;
   margin: 0 10px;
 }
 
-.navbar .pesquisa input {
+nav .pesquisa input {
   width: 215px;
   height: 28px;
   border-radius: 3px;
@@ -70,15 +70,15 @@ body {
   text-align: center;
 }
 
-.navbar .icones ion-icon {
+nav .icones ion-icon {
   margin: 0 5px;
 }
 
-.navbar .icones-mobile {
+nav .icones-mobile {
   display: none;
 }
 
-.corpo {
+main {
   display: flex;
   justify-content: space-between;
   width: 935px;
@@ -91,11 +91,11 @@ body {
   max-width: 614px;
 }
 
-.sidebar {
+aside {
   width: 293px;
 }
 
-.stories {
+#stories-container {
   display: flex;
   align-items: center;
   height: 118px;
@@ -106,7 +106,7 @@ body {
   position: relative;
 }
 
-.story {
+figure {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -118,23 +118,23 @@ body {
   margin-right: 10px;
 }
 
-.story .imagem {
+figure .img-background {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 66px;
   width: 66px;
-  background-image: url("./../assets/img/story-circle.svg") no-repeat;
+  background-image: url("./assets/img/story-circle.svg");
   background-size: cover;
 }
 
-.story .imagem img {
+figure .img-background img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.story .usuario {
+figure .user {
   width: 66px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -142,7 +142,7 @@ body {
   height: 14px;
 }
 
-.stories .setinha {
+#stories-container ion-icon {
   position: absolute;
   right: 10px;
   top: 45px;
@@ -153,7 +153,7 @@ body {
   cursor: pointer;
 }
 
-.post {
+article {
   border-radius: 3px;
   border: 1px solid #dbdbdb;
   display: flex;
@@ -161,7 +161,7 @@ body {
   margin-top: 18px;
 }
 
-.post .topo {
+article .post-header {
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
@@ -169,49 +169,49 @@ body {
   font-weight: 500;
 }
 
-.post .topo .usuario,
-.post .topo .acoes {
+article .post-header .user,
+article .post-header .acoes {
   display: flex;
   align-items: center;
 }
 
-.post .topo img {
+article .post-header img {
   width: 32px;
   height: 32px;
   margin-right: 10px;
 }
 
-.post .usuario,
-.post .topo img,
-.post .fundo img,
-.post ion-icon,
-.post strong {
+article .user,
+article .post-header img,
+article .post-footer img,
+article ion-icon,
+article strong {
   cursor: pointer;
 }
 
-.post .conteudo img {
+article > img {
   width: 100%;
 }
 
-.post .fundo .acoes {
+article .post-footer .acoes {
   display: flex;
   justify-content: space-between;
   padding: 13px 16px;
   font-size: 24px;
 }
 
-.post .fundo .acoes div:first-child ion-icon {
+article .post-footer .acoes div:first-child ion-icon {
   margin-right: 6px;
 }
 
-.post .fundo .curtidas {
+article .post-footer .curtidas {
   display: flex;
   align-items: center;
   padding: 0 16px 13px;
   font-weight: 300;
 }
 
-.post .fundo .curtidas img {
+article .post-footer .curtidas img {
   width: 20px;
   height: 20px;
   margin-right: 10px;
@@ -221,24 +221,24 @@ body {
   margin-bottom: 18px;
 }
 
-.sidebar {
+aside {
   padding-top: 24px;
   position: sticky;
   top: 88px;
 }
 
-.sidebar > .usuario {
+aside > .user {
   display: flex;
   align-items: center;
 }
 
-.sidebar > .usuario img {
+aside > .user img {
   width: 56px;
   height: 56px;
   border-radius: 50%;
 }
 
-.sidebar > .usuario .texto {
+aside > .user .texto {
   display: flex;
   flex-direction: column;
   margin-left: 14px;
@@ -246,19 +246,19 @@ body {
   color: #8e8e8e;
 }
 
-.sidebar > .usuario .texto strong {
+aside > .user .texto strong {
   font-weight: 500;
   color: #262626;
 }
 
-.sidebar .sugestoes .titulo {
+aside .sugestoes .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-.sidebar .sugestoes .sugestao {
+aside .sugestoes .sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,28 +267,28 @@ body {
   margin-bottom: 16px;
 }
 
-.sidebar .sugestoes .sugestao .usuario {
+aside .sugestoes .sugestao .user {
   display: flex;
 }
 
-.sidebar .sugestoes img {
+aside .sugestoes img {
   width: 32px;
   height: 32px;
 }
 
-.sidebar .sugestoes .seguir {
+aside .sugestoes .seguir {
   color: #139ef2;
   font-weight: 600;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto {
+aside .sugestoes .sugestao .user .texto {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.sidebar .sugestoes .sugestao .usuario .texto :last-child {
+aside .sugestoes .sugestao .user .texto :last-child {
   color: #8e8e8e;
   font-weight: 400;
 }
@@ -322,26 +322,26 @@ body {
 }
 
 @media (max-width: 935px) {
-  .sidebar {
+  aside {
     display: none;
   }
 
-  .navbar .container {
+  nav .container {
     padding: 0 20px;
   }
 
-  .corpo {
+  main {
     justify-content: center;
     width: 100%;
   }
 }
 
 @media (max-width: 614px) {
-  .corpo {
+  main {
     margin-top: 0;
   }
 
-  .post {
+  article {
     border-radius: 0;
     border-left: none;
     border-right: none;
@@ -352,7 +352,7 @@ body {
     margin-bottom: 72px;
   }
 
-  .stories {
+  #stories-container {
     background-color: transparent;
     border: none;
     width: 100%;
@@ -362,15 +362,15 @@ body {
     margin-top: 0;
   }
 
-  .navbar .pesquisa {
+  nav .pesquisa {
     display: none;
   }
 
-  .navbar .icones {
+  nav .icones {
     display: none;
   }
 
-  .navbar .icones-mobile {
+  nav .icones-mobile {
     display: flex;
   }
 
@@ -389,7 +389,7 @@ body {
     left: 0;
   }
 
-  .navbar .logo {
+  nav .logo {
     display: none;
   }
 
