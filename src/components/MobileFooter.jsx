@@ -1,6 +1,6 @@
-export default function List(props) {
+export default function MobileFooter() {
   return (
-    <div className="fundo-mobile">
+    <div id="fundo-mobile">
       <ion-icon name="home"></ion-icon>
       <ion-icon name="search-outline"></ion-icon>
       <ion-icon name="add-circle-outline"></ion-icon>

@@ -82,11 +82,10 @@ main {
   display: flex;
   justify-content: space-between;
   width: 935px;
-  margin: 0 auto;
-  margin-top: 88px;
+  margin: 88px auto;
 }
 
-.esquerda {
+#main-column {
   width: 100%;
   max-width: 614px;
 }
@@ -104,6 +103,10 @@ aside {
   padding: 0 18px;
   overflow: hidden;
   position: relative;
+}
+
+strong {
+  font-weight: bold;
 }
 
 figure {
@@ -251,14 +254,14 @@ aside > .user .texto strong {
   color: #262626;
 }
 
-aside .sugestoes .titulo {
+aside #sugestoes .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 0 14px;
 }
 
-aside .sugestoes .sugestao {
+aside #sugestoes .sugestao {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -267,52 +270,52 @@ aside .sugestoes .sugestao {
   margin-bottom: 16px;
 }
 
-aside .sugestoes .sugestao .user {
+aside #sugestoes .sugestao .user {
   display: flex;
 }
 
-aside .sugestoes img {
+aside #sugestoes img {
   width: 32px;
   height: 32px;
 }
 
-aside .sugestoes .seguir {
+aside #sugestoes .seguir {
   color: #139ef2;
   font-weight: 600;
 }
 
-aside .sugestoes .sugestao .user .texto {
+aside #sugestoes .sugestao .user .texto {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-aside .sugestoes .sugestao .user .texto :last-child {
+aside #sugestoes .sugestao .user .texto :last-child {
   color: #8e8e8e;
   font-weight: 400;
 }
 
-.links,
-.copyright {
+#links,
+#copyright {
   font-size: 11px;
   color: #c7c7c7;
 }
 
-.links {
+#links {
   margin-top: 40px;
   cursor: pointer;
 }
 
-.copyright {
+#copyright {
   margin-top: 18px;
 }
 
-.fundo-mobile {
+#fundo-mobile {
   display: none;
 }
 
-.fundo-mobile ion-icon {
+#fundo-mobile ion-icon {
   cursor: pointer;
 }
 
@@ -374,7 +377,7 @@ aside .sugestoes .sugestao .user .texto :last-child {
     display: flex;
   }
 
-  .fundo-mobile {
+  #fundo-mobile {
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
