@@ -2,24 +2,19 @@ import SuggestedUsers from "./SuggestedUsers";
 
 const suggestedUsers = [
   {
-    img: ["./assets/img/bad.vibes.memes.svg", "bad.vibes.memes avatar"],
-    userName: "bad.vibes.memes",
+    username: "bad.vibes.memes",
   },
   {
-    img: ["./assets/img/chibirdart.svg", "chibirdart avatar"],
-    userName: "chibirdart",
+    username: "chibirdart",
   },
   {
-    img: ["./assets/img/razoesparaacreditar.svg", "razoesparaacreditar avatar"],
-    userName: "razoesparaacreditar",
+    username: "razoesparaacreditar",
   },
   {
-    img: ["./assets/img/adorable_animals.svg", "adorable_animals avatar"],
-    userName: "adorable_animals",
+    username: "adorable_animals",
   },
   {
-    img: ["./assets/img/smallcutecats.svg", "smallcutecats avatar"],
-    userName: "smallcutecats",
+    username: "smallcutecats",
   },
 ];
 
@@ -31,8 +26,8 @@ export default function Suggested() {
         <div>Ver tudo</div>
       </div>
 
-      {suggestedUsers.map((user, index) => (
-        <SuggestedUsers key={index} img={user.img} userName={user.userName} />
+      {suggestedUsers.map((suggestedUser, index) => (
+        <SuggestedUsers key={index} user={suggestedUser.username} />
       ))}
     </div>
   );

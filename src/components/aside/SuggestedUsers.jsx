@@ -1,16 +1,12 @@
 export default function SuggestedUsers(props) {
-  const {
-    postKey,
-    img: [src, alt],
-    userName,
-  } = props;
+  const { postKey, user } = props;
 
   return (
     <div className="sugestao" key={postKey}>
       <div className="user">
-        <img alt={alt} src={src} />
+        <img alt={`${user} avatar`} src={`./assets/img/${user}.svg`} />
         <div className="texto">
-          <div className="nome">{userName}</div>
+          <div className="nome">{user}</div>
           <div className="razao">Segue você</div>
         </div>
       </div>

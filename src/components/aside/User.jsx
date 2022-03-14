@@ -1,21 +1,11 @@
-const userData = {
-  img: ["./assets/img/catanacomics.svg", "catanacomics avatar"],
-  username: "catanacomics",
-  displayName: "catana",
-};
-
-export default function User() {
-  const {
-    img: [src, alt],
-    username,
-    displayName,
-  } = userData;
+export default function User(props) {
+  const { user, displayName } = props;
 
   return (
     <div className="user">
-      <img alt={alt} src={src} />
+      <img alt={`${user} avatar`} src={`./assets/img/${user}.svg`} />
       <div className="texto">
-        <strong>{username}</strong>
+        <strong>{user}</strong>
         {displayName}
       </div>
     </div>
